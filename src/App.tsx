@@ -1,4 +1,4 @@
-// import CourseList from "./components/CourseList"
+
 
 
 import AppRoutes from "./routes/AppRoutes";

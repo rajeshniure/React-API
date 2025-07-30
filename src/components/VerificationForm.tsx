@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { TextField, Button, Stack, Typography } from "@mui/material";
 import { verifyEmailPost } from "../api/productApi";
+import { useNavigate } from "react-router-dom";
 
 const VerificationForm = () => {
+
+  const Navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [token, setToken] = useState("");
   const [message, setMessage] = useState("");
@@ -12,6 +15,7 @@ const VerificationForm = () => {
     try {
       const res = await verifyEmailPost(email, token);
       setMessage("✅ Verification successful!");
+      Navigate("/Login");
       console.log(res);
     } catch (error: any) {
       console.error("Verification failed:", error);

@@ -5,6 +5,7 @@ import {
   Typography,
   Box,
   MenuItem,
+  Stack,
 } from "@mui/material";
 import { useForm, Controller } from "react-hook-form";
 import { registerUser } from "../api/productApi";
@@ -67,8 +68,10 @@ const RegisterForm = () => {
             </TextField>
           )}
         />
-
+        <Stack direction="row" spacing={2} mt={2}>
         <Button type="submit" variant="contained" color="primary">Register</Button>
+        <Button variant="contained" color="secondary" onClick={() => navigate("/Login")}>Go to Login</Button>
+        </Stack>
       </Box>
     </Container>
   );
