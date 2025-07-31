@@ -1,17 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import RegisterForm from "../components/RegisterForm";
-import VerificationForm from "../components/VerificationForm";
-import Login from "../components/Login";
-import Home from "../components/Home";
+import AgentList from "../components/AgentList";
+import RegisterForm from "../components/RegistrationForm";
+
+
 
 function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/agents" element={<AgentList />} />
         <Route path="/register" element={<RegisterForm />} />
-        <Route path="/verify" element={<VerificationForm />} />
-        <Route path ="/login" element = {<Login />} />
-        <Route path="/home/" element={<Home />} />
         <Route path="*" element={<RegisterForm />} />
 
       </Routes>

@@ -4,17 +4,17 @@ const axiosConfig = axios.create({
   baseURL: "http://192.168.88.15:5000/api/",
 });
 
-// Request Interceptor
-axiosConfig.interceptors.request.use(
-  (config) => {
-    const token = localStorage.getItem("authToken");
-    if (token) {
-      config.headers.Authorization = `Bearer ${token}`;
-    }
-    return config;
-  },
-  (error) => Promise.reject(error)
-);
+// // Request Interceptor
+// axiosConfig.interceptors.request.use(
+//   (config) => {
+//     const token = localStorage.getItem("authToken");
+//     if (token) {
+//       config.headers.Authorization = `Bearer ${token}`;
+//     }
+//     return config;
+//   },
+//   (error) => Promise.reject(error)
+// );
 
 
 // Response Interceptor
