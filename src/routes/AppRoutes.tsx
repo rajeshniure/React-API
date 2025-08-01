@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AgentList from "../components/AgentList";
-import RegisterForm from "../components/RegistrationForm";
+import{ProductList} from "../components/ProductList";
+import { AddProductForm } from "../components/AddProductForm";
 
 
 
@@ -8,9 +8,9 @@ function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/agents" element={<AgentList />} />
-        <Route path="/register" element={<RegisterForm />} />
-        <Route path="*" element={<RegisterForm />} />
+        <Route path="/products" element={<ProductList />} />
+        <Route path="/add-product" element={<AddProductForm />} />
+        <Route path="*" element={<ProductList />} />
 
       </Routes>
     </BrowserRouter>
