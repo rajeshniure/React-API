@@ -1,18 +1,15 @@
 import axios from "../../axiosConfig";
 
- export const fetchAgents = async () => {
-  const res = await axios.get('/Agent/GetAllAgents');
+
+export const fetchProducts = async () => {
+  const res = await axios.get('/products');
   return res.data;
 };
 
-export const registerUser = async (formData: {
-  name: string;
-  email: string;
-  password: string;
-  agentId: number;
-}) => {
-  const res = await axios.post("/Sender/Register-Sender", formData);
+export const addProduct = async (product: { title: string; description: string; price: number;  image: string; }) => {
+  const res = await axios.post('/products', product);
   return res.data;
 };
 
 
+  
