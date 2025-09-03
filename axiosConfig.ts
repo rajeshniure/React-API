@@ -1,10 +1,10 @@
-import axios from 'axios';
+// import axios from 'axios';
 
-const axiosConfig = axios.create({
-  baseURL: 'https://fakestoreapi.com/', 
-  headers: {
-    'Content-Type': 'application/json',
-  },
-});
+// const axiosConfig = axios.create({
+//   baseURL: 'https://fakestoreapi.com/', 
+//   headers: {
+//     'Content-Type': 'application/json',
+//   },
+// });
 
-export default axiosConfig;
+// export default axiosConfig;
